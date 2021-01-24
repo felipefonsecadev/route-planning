@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver xmlns="https://www.optaplanner.org/xsd/solver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.optaplanner.org/xsd/solver https://www.optaplanner.org/xsd/solver/solver.xsd">
+    <!-- Domain model configuration -->
+    <solutionClass>io.tblx.routeplanning.entities.RoutePlan</solutionClass>
+    <entityClass>io.tblx.routeplanning.entities.Route</entityClass>
+
+    <!-- Score configuration -->
+    <scoreDirectorFactory>
+        <constraintProviderClass>io.tblx.routeplanning.solver.RoutePlanConstraintProvider</constraintProviderClass>
+    </scoreDirectorFactory>
+
+    <!-- Optimization algorithms configuration -->
+    <termination>
+        <secondsSpentLimit>10</secondsSpentLimit>
+    </termination>
+</solver>
